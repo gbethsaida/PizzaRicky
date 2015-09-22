@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alda.pizzeriaRickys.EmpleadoController>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Pizza">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="36.0" layoutY="149.0" prefHeight="130.0" prefWidth="250.0" text="Tamaño">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="104.0" prefWidth="200.0">
+                                 <children>
+                                    <CheckBox layoutX="9.0" layoutY="9.0" mnemonicParsing="false" text="Chico" />
+                                    <CheckBox layoutX="9.0" layoutY="43.0" mnemonicParsing="false" text="Mediano" />
+                                    <CheckBox layoutX="9.0" layoutY="80.0" mnemonicParsing="false" text="Grande" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="338.0" layoutY="27.0" prefHeight="383.0" prefWidth="250.0" text="Especialidad">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <CheckBox layoutX="20.0" layoutY="6.0" mnemonicParsing="false" text="Al pastor  " />
+                                    <CheckBox layoutX="19.0" layoutY="30.0" mnemonicParsing="false" text="Hawaiana Tradicional" />
+                                    <CheckBox layoutX="19.0" layoutY="55.0" mnemonicParsing="false" text="Hawaiana Internacional " />
+                                    <CheckBox layoutX="19.0" layoutY="78.0" mnemonicParsing="false" text="Combinada Especial " />
+                                    <CheckBox layoutX="20.0" layoutY="104.0" mnemonicParsing="false" text="Cubana" />
+                                    <CheckBox layoutX="20.0" layoutY="129.0" mnemonicParsing="false" text="Azteca" />
+                                    <CheckBox layoutX="20.0" layoutY="150.0" mnemonicParsing="false" text="Mexicana" />
+                                    <CheckBox layoutX="20.0" layoutY="172.0" mnemonicParsing="false" text="Clasica" />
+                                    <CheckBox layoutX="20.0" layoutY="194.0" mnemonicParsing="false" text="Oriental" />
+                                    <CheckBox layoutX="20.0" layoutY="215.0" mnemonicParsing="false" text="Mafiosa" />
+                                    <CheckBox layoutX="20.0" layoutY="237.0" mnemonicParsing="false" text="Carnes Frias " />
+                                    <CheckBox layoutX="20.0" layoutY="260.0" mnemonicParsing="false" text="Ricky Especial" />
+                                    <CheckBox layoutX="20.0" layoutY="282.0" mnemonicParsing="false" text="Ricky Pirata" />
+                                    <CheckBox layoutX="20.0" layoutY="306.0" mnemonicParsing="false" text="Mar y Tierra" />
+                                    <CheckBox layoutX="20.0" layoutY="329.0" mnemonicParsing="false" text="Pizza de Mariscos de 1 ingrediente" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <Button layoutX="689.0" layoutY="76.0" mnemonicParsing="false" text="Imprimir nota" />
+                        <Button layoutX="689.0" layoutY="137.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Siguiente" />
+                        <Label layoutX="615.0" layoutY="27.0" text="Numero de orden:" />
+                        <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="36.0" layoutY="26.0" prefHeight="100.0" prefWidth="250.0" text="Tipo Orden">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="70.0" prefWidth="248.0">
+                                 <children>
+                                    <CheckBox layoutX="9.0" layoutY="9.0" mnemonicParsing="false" text="Mesa" />
+                                    <CheckBox layoutX="9.0" layoutY="47.0" mnemonicParsing="false" text="Domicilio" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="36.0" layoutY="308.0" prefHeight="100.0" prefWidth="250.0" text="Cantidad de pizzas">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="104.0" prefWidth="200.0">
+                                 <children>
+                                    <TextField layoutX="50.0" layoutY="25.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <Label layoutX="722.0" layoutY="27.0" text="###" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Pedido Domicilio">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="33.0" layoutY="30.0" prefHeight="310.0" prefWidth="500.0" text="Datos">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0">
+                                 <children>
+                                    <Label layoutX="28.0" layoutY="19.0" text="Cliente:" />
+                                    <Label layoutX="14.0" layoutY="70.0" text="Dirección:" />
+                                    <Label layoutX="33.0" layoutY="113.0" text="Calle:" />
+                                    <Label layoutX="18.0" layoutY="164.0" text="Avenida:" />
+                                    <Label layoutX="21.0" layoutY="212.0" text="Colonia:" />
+                                    <Label layoutX="230.0" layoutY="212.0" text="Telefono:" />
+                                    <TextField layoutX="77.0" layoutY="15.0" prefHeight="25.0" prefWidth="355.0" />
+                                    <TextField layoutX="77.0" layoutY="66.0" prefHeight="25.0" prefWidth="355.0" />
+                                    <TextField layoutX="78.0" layoutY="109.0" prefHeight="25.0" prefWidth="354.0" />
+                                    <TextField layoutX="78.0" layoutY="160.0" prefHeight="25.0" prefWidth="149.0" />
+                                    <TextField layoutX="77.0" layoutY="208.0" />
+                                    <TextField layoutX="283.0" layoutY="208.0" />
+                                    <TextField layoutX="283.0" layoutY="160.0" />
+                                    <Label layoutX="230.0" layoutY="164.0" text="No. casa:" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <Button layoutX="689.0" layoutY="52.0" mnemonicParsing="false" text="Imprimir nota" />
+                        <Button layoutX="689.0" layoutY="116.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Siguente" />
+                        <Button layoutX="384.0" layoutY="408.0" mnemonicParsing="false" prefWidth="103.0" text="Limpiar" />
+                        <Button layoutX="260.0" layoutY="408.0" mnemonicParsing="false" text="Guardar datos " />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="Bebidas">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="26.0" layoutY="24.0" prefHeight="378.0" prefWidth="500.0" text="Bebidas">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="140.0" prefWidth="181.0">
+                                 <children>
+                                    <CheckBox layoutX="23.0" layoutY="13.0" mnemonicParsing="false" text="Refresco de lata" />
+                                    <CheckBox layoutX="23.0" layoutY="56.0" mnemonicParsing="false" text="Refresco 2 lts" />
+                                    <CheckBox layoutX="249.0" layoutY="57.0" mnemonicParsing="false" text="Powerade o Gatórade" />
+                                    <CheckBox layoutX="23.0" layoutY="103.0" mnemonicParsing="false" text="Té Lipton" />
+                                    <CheckBox layoutX="249.0" layoutY="118.0" mnemonicParsing="false" text="Agua de botella" />
+                                    <CheckBox layoutX="23.0" layoutY="147.0" mnemonicParsing="false" text="Agua para NESCAFE" />
+                                    <Separator layoutX="-4.0" layoutY="185.0" prefHeight="14.0" prefWidth="491.0" />
+                                    <CheckBox layoutX="249.0" layoutY="288.0" mnemonicParsing="false" text="Superior" />
+                                    <CheckBox layoutX="23.0" layoutY="262.0" mnemonicParsing="false" text="Sol" />
+                                    <CheckBox layoutX="249.0" layoutY="245.0" mnemonicParsing="false" text="Lager" />
+                                    <CheckBox layoutX="24.0" layoutY="207.0" mnemonicParsing="false" text="Michelada" />
+                                    <CheckBox layoutX="23.0" layoutY="316.0" mnemonicParsing="false" text="Tecate" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <Button layoutX="689.0" layoutY="52.0" mnemonicParsing="false" text="Imprimir nota" />
+                        <Button layoutX="689.0" layoutY="115.0" mnemonicParsing="false" prefWidth="89.0" text="Siguiente" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Extras y Postres">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="37.0" layoutY="218.0" prefHeight="200.0" prefWidth="300.0" text="Postres">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="269.0" prefWidth="200.0">
+                                 <children>
+                                    <CheckBox layoutX="26.0" layoutY="53.0" mnemonicParsing="false" text="Pay de queso" />
+                                    <CheckBox layoutX="26.0" layoutY="92.0" mnemonicParsing="false" text="Pastel de 3 leches" />
+                                    <CheckBox layoutX="26.0" layoutY="129.0" mnemonicParsing="false" text="Duraznos con crema " />
+                                    <CheckBox layoutX="27.0" layoutY="14.0" mnemonicParsing="false" text="Flan Napolitano" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="37.0" layoutY="29.0" prefHeight="150.0" prefWidth="300.0" text="Extras">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <CheckBox layoutX="27.0" layoutY="22.0" mnemonicParsing="false" text="Espaghetti Gratinado" />
+                                    <CheckBox layoutX="27.0" layoutY="70.0" mnemonicParsing="false" text="Espaghetti Mar y Tierra" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <Button layoutX="689.0" layoutY="111.0" mnemonicParsing="false" prefWidth="89.0" text="Siguiente" />
+                        <Button layoutX="689.0" layoutY="52.0" mnemonicParsing="false" text="Imprimir nota" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Confirmación">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="689.0" layoutY="104.0" mnemonicParsing="false" prefWidth="89.0" text="Pizzas" />
+                        <Button layoutX="689.0" layoutY="160.0" mnemonicParsing="false" prefWidth="89.0" text="P. Domicilio" />
+                        <Button layoutX="689.0" layoutY="215.0" mnemonicParsing="false" prefWidth="89.0" text="Bebidas" />
+                        <Button layoutX="689.0" layoutY="271.0" mnemonicParsing="false" prefWidth="89.0" text="Extras" />
+                        <Button layoutX="689.0" layoutY="52.0" mnemonicParsing="false" text="Imprimir nota" />
+                        <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="28.0" layoutY="52.0" prefHeight="300.0" prefWidth="500.0" text="Confirmar Pedido">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="44.0" layoutY="21.0" text="Tamaño:" />
+                                    <Label layoutX="21.0" layoutY="64.0" text="Especialidad:" />
+                                    <Label layoutX="43.0" layoutY="110.0" text="Bebidas:" />
+                                    <Label layoutX="50.0" layoutY="163.0" text="Extras:" />
+                                    <Label layoutX="44.0" layoutY="216.0" text="Postres:" />
+                                    <Label layoutX="174.0" layoutY="21.0" prefHeight="17.0" prefWidth="184.0" text="......" />
+                                    <Label layoutX="174.0" layoutY="157.0" prefHeight="17.0" prefWidth="184.0" text="......" />
+                                    <Label layoutX="174.0" layoutY="63.0" prefHeight="17.0" prefWidth="184.0" text="......." />
+                                    <Label layoutX="174.0" layoutY="108.0" prefHeight="17.0" prefWidth="184.0" text="......." />
+                                    <Label layoutX="174.0" layoutY="216.0" prefHeight="17.0" prefWidth="184.0" text="......." />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

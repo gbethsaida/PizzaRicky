@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane prefHeight="102.0" prefWidth="1000.0" style="-fx-background-color: GRAY;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" layoutX="257.0" layoutY="13.0" text="SISTEMA PIZZERIA RICKYS">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="Inicio" alignment="CENTER" contentDisplay="RIGHT" layoutX="17.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="94.0" text="Inicio" />
+         </children></AnchorPane>
+   </center>
+</BorderPane>
