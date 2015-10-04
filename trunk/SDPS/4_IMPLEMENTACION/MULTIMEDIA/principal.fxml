@@ -51,14 +51,28 @@
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="116.0" layoutY="89.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Iniciar" />
-            <Button layoutX="301.0" layoutY="89.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Categorias" />
-            <Button layoutX="475.0" layoutY="89.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Productos" />
-            <Button layoutX="663.0" layoutY="89.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Empleados" />
-            <Button layoutX="116.0" layoutY="350.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Medidas" />
-            <Button layoutX="301.0" layoutY="350.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Unidades" />
-            <Button layoutX="475.0" layoutY="350.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Clientes" />
-            <Button layoutX="663.0" layoutY="350.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Cerrar" />
+            <HBox layoutX="203.0" layoutY="112.0" prefHeight="80.0" prefWidth="421.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" text="Iniciar" />
+                  <Separator orientation="VERTICAL" prefHeight="59.0" prefWidth="6.0" />
+                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" text="Categorias" />
+                  <Separator orientation="VERTICAL" prefHeight="59.0" prefWidth="6.0" />
+                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" text="Productos" />
+                  <Separator orientation="VERTICAL" prefHeight="59.0" prefWidth="6.0" />
+                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" text="Empleados" />
+               </children>
+            </HBox>
+            <HBox layoutX="203.0" layoutY="407.0" prefHeight="85.0" prefWidth="422.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" text="Medidas" />
+                  <Separator orientation="VERTICAL" prefHeight="59.0" prefWidth="6.0" />
+                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" text="Unidades" />
+                  <Separator orientation="VERTICAL" prefHeight="59.0" prefWidth="6.0" />
+                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" text="Clientes" />
+                  <Separator orientation="VERTICAL" prefHeight="59.0" prefWidth="6.0" />
+                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" text="Cerrar" />
+               </children>
+            </HBox>
          </children>
       </AnchorPane>
    </center>
