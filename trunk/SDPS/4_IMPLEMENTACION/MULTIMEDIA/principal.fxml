@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane prefHeight="107.0" prefWidth="1001.0" style="-fx-background-color: #FF3030;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="8.0" layoutY="65.0" prefHeight="42.0" prefWidth="988.0">
+               <children>
+                  <Label text="Empleado:">
+                     <font>
+                        <Font name="Estrangelo Edessa" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <ImageView fitHeight="68.0" fitWidth="101.0" layoutX="899.0" layoutY="-2.0">
+               <image>
+                  <Image url="@iconos/logoRicky.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #FF3030;" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Iniciar" />
+            <Separator prefHeight="5.0" prefWidth="100.0" style="-fx-background-color: #000000;" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Categorias" />
+            <Separator prefHeight="5.0" prefWidth="100.0" style="-fx-background-color: #000000;" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Productos" />
+            <Separator prefHeight="5.0" prefWidth="100.0" style="-fx-background-color: #000000;" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Empleados" />
+            <Separator prefHeight="5.0" prefWidth="100.0" style="-fx-background-color: #000000;" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Medidas" />
+            <Separator prefHeight="5.0" prefWidth="100.0" style="-fx-background-color: #000000;" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Unidades" />
+            <Separator prefHeight="5.0" prefWidth="100.0" style="-fx-background-color: #000000;" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Clientes" />
+            <Separator prefHeight="5.0" prefWidth="100.0" style="-fx-background-color: #000000;" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Cerrar" />
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="116.0" layoutY="89.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Iniciar" />
+            <Button layoutX="301.0" layoutY="89.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Categorias" />
+            <Button layoutX="475.0" layoutY="89.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Productos" />
+            <Button layoutX="663.0" layoutY="89.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Empleados" />
+            <Button layoutX="116.0" layoutY="350.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Medidas" />
+            <Button layoutX="301.0" layoutY="350.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Unidades" />
+            <Button layoutX="475.0" layoutY="350.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Clientes" />
+            <Button layoutX="663.0" layoutY="350.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Cerrar" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
