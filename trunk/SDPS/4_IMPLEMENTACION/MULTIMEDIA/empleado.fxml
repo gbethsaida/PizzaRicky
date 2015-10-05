@@ -7,71 +7,69 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <top>
       <AnchorPane prefHeight="80.0" prefWidth="600.0" style="-fx-background-color: #FF3030;" BorderPane.alignment="CENTER">
          <children>
             <ToolBar layoutY="37.0" prefHeight="58.0" prefWidth="750.0">
               <items>
                 <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0">
-                     <tooltip>
-                        <Tooltip text="Nuevo" />
-                     </tooltip>
                      <graphic>
                         <ImageView fitHeight="40.0" fitWidth="40.0">
                            <image>
                               <Image url="@iconos/nuevo.png" />
                            </image>
                         </ImageView>
-                     </graphic></Button>
-                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0">
+                     </graphic>
                      <tooltip>
-                        <Tooltip text="Guardar" />
-                     </tooltip>
+                        <Tooltip text="Nuevo" />
+                     </tooltip></Button>
+                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0">
                      <graphic>
                         <ImageView fitHeight="40.0" fitWidth="40.0">
                            <image>
                               <Image url="@iconos/guardar.png" />
                            </image>
                         </ImageView>
-                     </graphic></Button>
-                  <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="15.0" />
-                  <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="6.0" />
-                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0">
+                     </graphic>
                      <tooltip>
-                        <Tooltip text="Editar" />
-                     </tooltip>
+                        <Tooltip text="Guardar" />
+                     </tooltip></Button>
+                  <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="15.0" />
+                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0">
                      <graphic>
                         <ImageView fitHeight="40.0" fitWidth="40.0">
                            <image>
                               <Image url="@iconos/editar.png" />
                            </image>
                         </ImageView>
-                     </graphic></Button>
-                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0">
+                     </graphic>
                      <tooltip>
-                        <Tooltip text="Eliminar" />
-                     </tooltip>
+                        <Tooltip text="Editar" />
+                     </tooltip></Button>
+                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0">
                      <graphic>
                         <ImageView fitHeight="40.0" fitWidth="40.0">
                            <image>
                               <Image url="@iconos/eliminar.png" />
                            </image>
                         </ImageView>
-                     </graphic></Button>
-                  <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="6.0" />
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Borrar" />
+                     </tooltip></Button>
                   <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="15.0" />
                   <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0">
-                     <tooltip>
-                        <Tooltip text="Cancelar" />
-                     </tooltip>
                      <graphic>
                         <ImageView fitHeight="40.0" fitWidth="40.0">
                            <image>
                               <Image url="@iconos/cancelar.png" />
                            </image>
                         </ImageView>
-                     </graphic></Button>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Cancelar" />
+                     </tooltip></Button>
               </items>
             </ToolBar>
             <Label layoutX="9.0" layoutY="5.0" text="Empleados">
@@ -85,37 +83,54 @@
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="60.0" layoutY="30.0" text="Nombre:" />
-            <Label layoutX="14.0" layoutY="66.0" text="Apelllido Paterno:" />
-            <Label layoutX="14.0" layoutY="102.0" text="Apellido Materno:" />
-            <Label layoutX="527.0" layoutY="30.0" text="Celular:" />
-            <Label layoutX="306.0" layoutY="30.0" text="Telefono:" />
-            <Label layoutX="302.0" layoutY="66.0" text="Dirección:" />
-            <TextField layoutX="121.0" layoutY="26.0" />
-            <ComboBox layoutX="368.0" layoutY="98.0" prefHeight="25.0" prefWidth="149.0" />
-            <Label layoutX="320.0" layoutY="102.0" text="Cargo:" />
-            <TextField layoutX="368.0" layoutY="62.0" />
-            <TextField layoutX="368.0" layoutY="26.0" />
-            <TextField layoutX="121.0" layoutY="62.0" />
-            <TextField layoutX="121.0" layoutY="98.0" />
-            <TextField layoutX="587.0" layoutY="26.0" />
-            <TableView layoutX="31.0" layoutY="182.0" prefHeight="200.0" prefWidth="689.0">
+            <TableView layoutX="9.0" layoutY="232.0" prefHeight="200.0" prefWidth="733.0">
               <columns>
                 <TableColumn prefWidth="75.0" text="Nombre" />
-                <TableColumn prefWidth="75.0" text="Apellido Paterno " />
-                  <TableColumn prefWidth="75.0" text="Apellido Materno" />
-                  <TableColumn prefWidth="75.0" text="Celular" />
-                  <TableColumn prefWidth="75.0" text="Telefono" />
-                  <TableColumn prefWidth="75.0" text="Direción" />
-                  <TableColumn prefWidth="75.0" text="Tipo" />
+                <TableColumn prefWidth="136.0" text="Apellido Paterno " />
+                  <TableColumn prefWidth="133.0" text="Apellido Materno" />
+                  <TableColumn prefWidth="128.0" text="Celular" />
+                  <TableColumn prefWidth="150.0" text="Teléfono" />
+                  <TableColumn prefWidth="110.0" text="Tipo" />
               </columns>
             </TableView>
-            <Button layoutX="345.0" layoutY="151.0" mnemonicParsing="false" text="Filtrar" />
-            <Button layoutX="403.0" layoutY="151.0" mnemonicParsing="false" text="Quitar Filtro" />
-            <TextField layoutX="121.0" layoutY="151.0" />
-            <Label layoutX="34.0" layoutY="155.0" text="Buscar:" />
-            <Label layoutX="34.0" layoutY="386.0" text="Total: 0 Registro(s)" />
-            <Button layoutX="283.0" layoutY="151.0" mnemonicParsing="false" text="Buscar" />
+            <Button layoutX="476.0" layoutY="199.0" mnemonicParsing="false" text="Filtrar" />
+            <Button layoutX="385.0" layoutY="199.0" mnemonicParsing="false" text="Quitar Filtro" />
+            <TextField layoutX="593.0" layoutY="199.0" />
+            <Label layoutX="9.0" layoutY="435.0" text="Total: 0 Registro(s)" />
+            <Button layoutX="533.0" layoutY="199.0" mnemonicParsing="false" text="Buscar" />
+            <TitledPane animated="false" layoutX="9.0" layoutY="7.0" prefHeight="184.0" prefWidth="733.0" text="untitled">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="6.0" layoutY="13.0" text="Nombre:" />
+                        <Label layoutX="6.0" layoutY="44.0" text="Apelllido Paterno:" />
+                        <Label layoutX="6.0" layoutY="78.0" text="Apellido Materno:" />
+                        <Label layoutX="283.0" layoutY="44.0" text="Celular:" />
+                        <Label layoutX="282.0" layoutY="13.0" text="Teléfono" />
+                        <Label layoutX="517.0" layoutY="13.0" text="Calle:" />
+                        <TextField layoutX="121.0" layoutY="9.0" />
+                        <ComboBox layoutX="350.0" layoutY="74.0" prefHeight="25.0" prefWidth="149.0" promptText="Administrador" />
+                        <Label layoutX="284.0" layoutY="78.0" text="Tipo:" />
+                        <TextField layoutX="350.0" layoutY="40.0" />
+                        <TextField layoutX="350.0" layoutY="9.0" />
+                        <TextField layoutX="121.0" layoutY="40.0" />
+                        <TextField layoutX="121.0" layoutY="74.0" />
+                        <TextField layoutX="574.0" layoutY="9.0" />
+                        <Label layoutX="517.0" layoutY="44.0" text="Colonia:" />
+                        <Label layoutX="517.0" layoutY="78.0" text="Ciudad:" />
+                        <TextField layoutX="574.0" layoutY="40.0" />
+                        <TextField layoutX="574.0" layoutY="74.0" />
+                        <Label layoutX="8.0" layoutY="122.0" text="Usuario:" />
+                        <TextField layoutX="62.0" layoutY="118.0" />
+                        <Label layoutX="234.0" layoutY="122.0" text="Contraseña:" />
+                        <Label layoutX="489.0" layoutY="122.0" text="Confirmar:" />
+                        <TextField layoutX="310.0" layoutY="118.0" />
+                        <TextField layoutX="574.0" layoutY="118.0" />
+                        <Separator layoutX="-2.0" layoutY="103.0" prefHeight="13.0" prefWidth="735.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
          </children>
       </AnchorPane>
    </center>

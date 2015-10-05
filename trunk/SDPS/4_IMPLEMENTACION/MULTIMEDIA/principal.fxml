@@ -10,13 +10,21 @@
    <top>
       <AnchorPane prefHeight="107.0" prefWidth="1001.0" style="-fx-background-color: #FF3030;" BorderPane.alignment="CENTER">
          <children>
-            <HBox layoutX="8.0" layoutY="65.0" prefHeight="42.0" prefWidth="988.0">
+            <HBox layoutX="8.0" layoutY="56.0" prefHeight="51.0" prefWidth="988.0">
                <children>
-                  <Label text="Empleado:">
-                     <font>
-                        <Font name="Estrangelo Edessa" size="24.0" />
-                     </font>
-                  </Label>
+                  <Button fx:id="btnInicio" mnemonicParsing="false" onAction="#IniciarSession" prefHeight="50.0" prefWidth="100.0" text="Iniciar" />
+                  <Separator orientation="VERTICAL" prefHeight="42.0" prefWidth="5.0" />
+                  <Button fx:id="btnProducto" mnemonicParsing="false" onAction="#AbririProducto" prefHeight="50.0" prefWidth="100.0" text="Productos" />
+                  <Separator orientation="VERTICAL" prefHeight="42.0" prefWidth="5.0" />
+                  <Button fx:id="btnEmpleado" mnemonicParsing="false" onAction="#AbrirEmpleado" prefHeight="50.0" prefWidth="100.0" text="Empleados" />
+                  <Separator orientation="VERTICAL" prefHeight="42.0" prefWidth="5.0" />
+                  <Button fx:id="btnCliente" mnemonicParsing="false" onAction="#AbrirCliente" prefHeight="50.0" prefWidth="100.0" text="Clientes" />
+                  <Separator orientation="VERTICAL" prefHeight="42.0" prefWidth="5.0" />
+                  <Button fx:id="btnPedido" mnemonicParsing="false" onAction="#AbrirPedido" prefHeight="50.0" prefWidth="100.0" text="Pedidos" />
+                  <Separator orientation="VERTICAL" prefHeight="42.0" prefWidth="5.0" />
+                  <Button fx:id="btnVenta" mnemonicParsing="false" onAction="#AbrirVenta" prefHeight="50.0" prefWidth="100.0" text="Ventas" />
+                  <Separator orientation="VERTICAL" prefHeight="42.0" prefWidth="5.0" />
+                  <Button fx:id="btnCerrar" mnemonicParsing="false" onAction="#CerrarSession" prefHeight="50.0" prefWidth="100.0" text="Cerrar" />
                </children>
             </HBox>
             <ImageView fitHeight="68.0" fitWidth="101.0" layoutX="899.0" layoutY="-2.0">
@@ -24,56 +32,23 @@
                   <Image url="@iconos/logoRicky.jpg" />
                </image>
             </ImageView>
+            <Label layoutX="4.0" layoutY="16.0" text="Empleado:">
+               <font>
+                  <Font name="Estrangelo Edessa" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblEmpleado" layoutX="125.0" layoutY="17.0" text="Label">
+               <font>
+                  <Font name="Estrangelo Edessa" size="24.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </top>
    <right>
-      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #FF3030;" BorderPane.alignment="CENTER">
-         <children>
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Iniciar" />
-            <Separator prefHeight="5.0" prefWidth="100.0" style="-fx-background-color: #000000;" />
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Categorias" />
-            <Separator prefHeight="5.0" prefWidth="100.0" style="-fx-background-color: #000000;" />
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Productos" />
-            <Separator prefHeight="5.0" prefWidth="100.0" style="-fx-background-color: #000000;" />
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Empleados" />
-            <Separator prefHeight="5.0" prefWidth="100.0" style="-fx-background-color: #000000;" />
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Medidas" />
-            <Separator prefHeight="5.0" prefWidth="100.0" style="-fx-background-color: #000000;" />
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Unidades" />
-            <Separator prefHeight="5.0" prefWidth="100.0" style="-fx-background-color: #000000;" />
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Clientes" />
-            <Separator prefHeight="5.0" prefWidth="100.0" style="-fx-background-color: #000000;" />
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Cerrar" />
-         </children>
-      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #FF3030;" BorderPane.alignment="CENTER" />
    </right>
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <HBox layoutX="203.0" layoutY="112.0" prefHeight="80.0" prefWidth="421.0">
-               <children>
-                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" text="Iniciar" />
-                  <Separator orientation="VERTICAL" prefHeight="59.0" prefWidth="6.0" />
-                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" text="Categorias" />
-                  <Separator orientation="VERTICAL" prefHeight="59.0" prefWidth="6.0" />
-                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" text="Productos" />
-                  <Separator orientation="VERTICAL" prefHeight="59.0" prefWidth="6.0" />
-                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" text="Empleados" />
-               </children>
-            </HBox>
-            <HBox layoutX="203.0" layoutY="407.0" prefHeight="85.0" prefWidth="422.0">
-               <children>
-                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" text="Medidas" />
-                  <Separator orientation="VERTICAL" prefHeight="59.0" prefWidth="6.0" />
-                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" text="Unidades" />
-                  <Separator orientation="VERTICAL" prefHeight="59.0" prefWidth="6.0" />
-                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" text="Clientes" />
-                  <Separator orientation="VERTICAL" prefHeight="59.0" prefWidth="6.0" />
-                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" text="Cerrar" />
-               </children>
-            </HBox>
-         </children>
-      </AnchorPane>
+      <AnchorPane prefHeight="578.0" prefWidth="900.0" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>

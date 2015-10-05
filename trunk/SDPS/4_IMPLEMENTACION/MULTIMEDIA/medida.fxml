@@ -6,8 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <top>
       <AnchorPane prefHeight="80.0" prefWidth="600.0" style="-fx-background-color: #FF3030;" BorderPane.alignment="CENTER">
          <children>
@@ -21,6 +20,9 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <tooltip>
+                        <Tooltip text="Nuevo" />
+                     </tooltip>
                   </Button>
                   <Button mnemonicParsing="false">
                      <graphic>
@@ -30,6 +32,9 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <tooltip>
+                        <Tooltip text="Guardar" />
+                     </tooltip>
                   </Button>
                   <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="15.0" />
                   <Button mnemonicParsing="false">
@@ -40,6 +45,9 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <tooltip>
+                        <Tooltip text="Editar" />
+                     </tooltip>
                   </Button>
                   <Button mnemonicParsing="false">
                      <graphic>
@@ -49,6 +57,9 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <tooltip>
+                        <Tooltip text="Eliminar" />
+                     </tooltip>
                   </Button>
                   <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="15.0" />
                   <Button mnemonicParsing="false">
@@ -59,6 +70,9 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <tooltip>
+                        <Tooltip text="Cancelar" />
+                     </tooltip>
                   </Button>
               </items>
             </ToolBar>
@@ -73,24 +87,32 @@
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <TableView layoutX="32.0" layoutY="180.0" prefHeight="200.0" prefWidth="689.0">
+            <TableView layoutX="9.0" layoutY="229.0" prefHeight="200.0" prefWidth="733.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
+                <TableColumn prefWidth="213.0" text="Categoria" />
+                <TableColumn prefWidth="287.0" text="Nombre" />
+                  <TableColumn prefWidth="232.0" text="Producto" />
               </columns>
             </TableView>
-            <Button layoutX="289.0" layoutY="147.0" mnemonicParsing="false" text="Buscar" />
-            <Label layoutX="36.0" layoutY="74.0" text="Nombre:" />
-            <TextField layoutX="121.0" layoutY="70.0" />
-            <Label layoutX="340.0" layoutY="22.0" text="Producto:" />
-            <Label layoutX="31.0" layoutY="22.0" text="Categoria:" />
-            <ComboBox layoutX="120.0" layoutY="18.0" prefWidth="150.0" />
-            <TextField layoutX="424.0" layoutY="18.0" />
-            <Button layoutX="412.0" layoutY="147.0" mnemonicParsing="false" text="Quitar Filtro" />
-            <Button layoutX="354.0" layoutY="147.0" mnemonicParsing="false" text="Filtro" />
-            <Label layoutX="32.0" layoutY="385.0" text="Total:0 Registros" />
-            <TextField layoutX="121.0" layoutY="147.0" />
-            <Label layoutX="40.0" layoutY="151.0" text="Buscar:" />
+            <Button layoutX="535.0" layoutY="196.0" mnemonicParsing="false" text="Buscar" />
+            <Button layoutX="393.0" layoutY="196.0" mnemonicParsing="false" text="Quitar Filtro" />
+            <Button layoutX="480.0" layoutY="196.0" mnemonicParsing="false" text="Filtro" />
+            <Label layoutX="9.0" layoutY="435.0" text="Total:0 Registros" />
+            <TextField layoutX="593.0" layoutY="196.0" />
+            <TitledPane animated="false" layoutX="9.0" layoutY="5.0" prefHeight="183.0" prefWidth="733.0" text="untitled">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="13.0" layoutY="70.0" text="Nombre:" />
+                        <TextField layoutX="98.0" layoutY="66.0" />
+                        <Label layoutX="317.0" layoutY="18.0" text="Producto:" />
+                        <Label layoutX="8.0" layoutY="18.0" text="Categoria:" />
+                        <ComboBox layoutX="97.0" layoutY="14.0" prefWidth="150.0" />
+                        <TextField layoutX="401.0" layoutY="14.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
          </children>
       </AnchorPane>
    </center>
