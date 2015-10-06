@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ToolBar layoutY="46.0" prefHeight="58.0" prefWidth="750.0">
+         <items>
+            <Button fx:id="btnNuevo" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0">
+               <tooltip>
+                  <Tooltip text="Nuevo" />
+               </tooltip>
+            </Button>
+            <Button fx:id="btnGuardar" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0">
+               <tooltip>
+                  <Tooltip text="Guardar" />
+               </tooltip>
+            </Button>
+            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="15.0" />
+            <Button fx:id="btnEditar" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0">
+               <tooltip>
+                  <Tooltip text="Editar" />
+               </tooltip>
+            </Button>
+            <Button fx:id="btnEliminar" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0">
+               <tooltip>
+                  <Tooltip text="Borrar" />
+               </tooltip>
+            </Button>
+            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="15.0" />
+            <Button fx:id="btnCancelar" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0">
+               <tooltip>
+                  <Tooltip text="Cancelar" />
+               </tooltip>
+            </Button>
+         </items>
+      </ToolBar>
+      <Label prefHeight="48.0" prefWidth="750.0" style="-fx-background-color: #FF3030;" text="Empleados">
+         <font>
+            <Font name="Estrangelo Edessa" size="24.0" />
+         </font>
+      </Label>
+      <TitledPane animated="false" collapsible="false" layoutX="9.0" layoutY="112.0" prefHeight="200.0" prefWidth="733.0" text="Datos Generales">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="6.0" layoutY="13.0" text="Nombre:" />
+                  <Label layoutX="6.0" layoutY="44.0" text="Apelllido Paterno:" />
+                  <Label layoutX="6.0" layoutY="78.0" text="Apellido Materno:" />
+                  <Label layoutX="283.0" layoutY="44.0" text="Celular:" />
+                  <Label layoutX="282.0" layoutY="13.0" text="Teléfono" />
+                  <Label layoutX="517.0" layoutY="13.0" text="Calle:" />
+                  <TextField fx:id="txtNombre" layoutX="121.0" layoutY="9.0" />
+                  <ComboBox fx:id="cboTipo" layoutX="350.0" layoutY="74.0" prefHeight="25.0" prefWidth="149.0" promptText="Administrador" />
+                  <Label layoutX="284.0" layoutY="78.0" text="Tipo:" />
+                  <TextField fx:id="txtCelular" layoutX="350.0" layoutY="40.0" />
+                  <TextField fx:id="txtTelefono" layoutX="350.0" layoutY="9.0" />
+                  <TextField fx:id="txtAP" layoutX="121.0" layoutY="40.0" />
+                  <TextField fx:id="txtAM" layoutX="121.0" layoutY="74.0" />
+                  <TextField fx:id="txtCalle" layoutX="574.0" layoutY="9.0" />
+                  <Label layoutX="517.0" layoutY="44.0" text="Colonia:" />
+                  <Label layoutX="517.0" layoutY="78.0" text="Ciudad:" />
+                  <TextField fx:id="txtColonia" layoutX="574.0" layoutY="40.0" />
+                  <TextField fx:id="txtCiudad" layoutX="574.0" layoutY="74.0" />
+                  <Label layoutX="8.0" layoutY="122.0" text="Usuario:" />
+                  <TextField fx:id="txtUsuario" layoutX="62.0" layoutY="118.0" />
+                  <Label layoutX="234.0" layoutY="122.0" text="Contraseña:" />
+                  <Label layoutX="489.0" layoutY="122.0" text="Confirmar:" />
+                  <TextField fx:id="txtContrasena" layoutX="310.0" layoutY="118.0" />
+                  <TextField fx:id="txtConfirmar" layoutX="574.0" layoutY="118.0" />
+                  <Separator layoutX="-2.0" layoutY="103.0" prefHeight="13.0" prefWidth="735.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <Button fx:id="btnBuscar" layoutX="530.0" layoutY="320.0" mnemonicParsing="false" text="Buscar" />
+      <Label layoutX="9.0" layoutY="570.0" text="Total: 0 Registro(s)" />
+      <TextField fx:id="txtBuscar" layoutX="593.0" layoutY="320.0" />
+      <Button fx:id="btnQFiltro" layoutX="376.0" layoutY="320.0" mnemonicParsing="false" text="Quitar Filtro" />
+      <Button fx:id="btnFiltro" layoutX="474.0" layoutY="320.0" mnemonicParsing="false" text="Filtrar" />
+      <TableView fx:id="tblEmpleados" layoutX="9.0" layoutY="357.0" prefHeight="200.0" prefWidth="733.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="Nombre" />
+            <TableColumn prefWidth="136.0" text="Apellido Paterno " />
+            <TableColumn prefWidth="133.0" text="Apellido Materno" />
+            <TableColumn prefWidth="128.0" text="Celular" />
+            <TableColumn prefWidth="150.0" text="Teléfono" />
+            <TableColumn prefWidth="110.0" text="Tipo" />
+         </columns>
+      </TableView>
+   </children>
+   <padding>
+      <Insets left="100.0" top="250.0" />
+   </padding>
+</AnchorPane>

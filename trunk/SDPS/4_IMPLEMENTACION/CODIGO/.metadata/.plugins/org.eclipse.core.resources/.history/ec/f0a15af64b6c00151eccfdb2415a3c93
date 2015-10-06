@@ -1,0 +1,50 @@
+package Vista;
+
+import Controlador.InterfazControlador;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+
+public class PrincipalCategoria extends Application{
+
+	VentanaControlador misVentanas = new VentanaControlador();
+    InterfazControlador controladorPrincipal;
+	BorderPane contenedor = null;
+
+  public static String pantallaCategoria= "categoria";
+  public static String archivoCategoria ="categoria.fxml";
+ 
+	public static void main(String [] args){
+	
+		launch(args);
+	}
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		// TODO Auto-generated method stub
+		misVentanas.cargarPantalla(PrincipalInterfaz.pantallaCategoria,PrincipalInterfaz.archivoCategoria);
+
+		java.net.URL location= getClass().getResource("categoria.fxml");
+		FXMLLoader fxml = new FXMLLoader(location);
+		contenedor = (BorderPane)fxml.load();
+		controladorPrincipal = fxml.getController();
+		
+		initComponent();
+		Group root= new Group();
+		contenedor.setCenter(misVentanas);
+		root.getChildren().add(contenedor);
+	
+		Scene scene = new Scene(root,1000,700);
+		primaryStage.setScene(scene);
+		primaryStage.centerOnScreen();
+		primaryStage.show();
+		
+	}
+	private void initComponent() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

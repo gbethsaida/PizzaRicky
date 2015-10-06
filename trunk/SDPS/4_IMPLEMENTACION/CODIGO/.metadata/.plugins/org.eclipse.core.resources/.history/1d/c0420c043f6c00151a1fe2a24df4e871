@@ -1,0 +1,83 @@
+package pizzeriaRicky.controlador;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import pizzeriaRicky.vista.Principal;
+
+import pizzeriaRicky.modelo.Empleado;
+import pizzeriaRicky.vista.ControladorVentana;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+
+public class ControladorPrincipal implements Initializable{
+	@FXML private Label lblEmpleado;
+	@FXML private Button btnInicio;
+	@FXML private Button btnProducto;
+	@FXML private Button btnEmpleado;
+	@FXML private Button btnCliente;
+	@FXML private Button btnPedido;
+	@FXML private Button btnVenta;
+	@FXML private Button btnCerrar;
+	
+	ControladorVentana miControlador;
+	Empleado empleadoSeleccionado = null;
+
+
+	
+	/*public void asignarVentanaPrincipal(ControladorVentana paginaInterna){
+		miControlador = paginaInterna;
+	}*/
+	
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		lblEmpleado.setText("");
+		
+	}
+	
+	public void asignarDatos(Empleado objeto){
+		lblEmpleado.setText(objeto.toString().trim());
+	}
+	
+	public void limpiarDatos(){
+		lblEmpleado.setText("");
+	}
+	
+	public void IniciarSession() throws IOException {//aqui es el metodo que maneja a el boton porque el onAction se llama asi
+        FXMLLoader root = new FXMLLoader(getClass().getClassLoader().getResource("pizzaeriaRicky/vista/.fxml"));
+
+		ControladorVentana paginaInterna = new ControladorVentana();
+		paginaInterna.mostrarPantalla("Principal.pantallaEmpleado");
+		
+	}
+	
+	public void AbririProducto(){
+		
+	}
+	
+	public void AbrirEmpleado(){
+		
+	}
+	
+	public void AbrirCliente(){
+		
+	}
+	
+	public void AbrirPedido(){
+		
+	}
+	
+	public void AbrirVenta(){
+		
+	}
+	
+	public void CerrarSession(){
+		
+	}
+
+
+}

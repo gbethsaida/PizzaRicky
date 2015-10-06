@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label prefHeight="48.0" prefWidth="750.0" style="-fx-background-color: #FF3030;" text="Medidas">
+         <font>
+            <Font name="Estrangelo Edessa" size="24.0" />
+         </font>
+      </Label>
+      <ToolBar layoutY="47.0" prefWidth="750.0">
+         <items>
+            <Button mnemonicParsing="false">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0">
+                     <image>
+                        <Image url="@../../../../01-PROYECTO/pizzeriaRicky/src/pizzeriaRicky/vista/iconos/nuevo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Nuevo" />
+               </tooltip>
+            </Button>
+            <Button mnemonicParsing="false">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0">
+                     <image>
+                        <Image url="@../../../../01-PROYECTO/pizzeriaRicky/src/pizzeriaRicky/vista/iconos/guardar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Guardar" />
+               </tooltip>
+            </Button>
+            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="15.0" />
+            <Button mnemonicParsing="false">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0">
+                     <image>
+                        <Image url="@../../../../01-PROYECTO/pizzeriaRicky/src/pizzeriaRicky/vista/iconos/editar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Editar" />
+               </tooltip>
+            </Button>
+            <Button mnemonicParsing="false">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0">
+                     <image>
+                        <Image url="@../../../../01-PROYECTO/pizzeriaRicky/src/pizzeriaRicky/vista/iconos/eliminar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Eliminar" />
+               </tooltip>
+            </Button>
+            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="15.0" />
+            <Button mnemonicParsing="false">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0">
+                     <image>
+                        <Image url="@../../../../01-PROYECTO/pizzeriaRicky/src/pizzeriaRicky/vista/iconos/cancelar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Cancelar" />
+               </tooltip>
+            </Button>
+         </items>
+      </ToolBar>
+      <TitledPane animated="false" layoutX="9.0" layoutY="112.0" prefHeight="200.0" prefWidth="733.0" text="untitled">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="13.0" layoutY="70.0" text="Nombre:" />
+                  <TextField layoutX="98.0" layoutY="66.0" />
+                  <Label layoutX="317.0" layoutY="18.0" text="Producto:" />
+                  <Label layoutX="8.0" layoutY="18.0" text="Categoria:" />
+                  <ComboBox layoutX="97.0" layoutY="14.0" prefWidth="150.0" />
+                  <TextField layoutX="401.0" layoutY="14.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TextField layoutX="587.0" layoutY="323.0" />
+      <Label layoutX="9.0" layoutY="570.0" text="Total:0 Registros" />
+      <Button layoutX="474.0" layoutY="323.0" mnemonicParsing="false" text="Filtro" />
+      <Button layoutX="385.0" layoutY="323.0" mnemonicParsing="false" text="Quitar Filtro" />
+      <Button layoutX="527.0" layoutY="323.0" mnemonicParsing="false" text="Buscar" />
+      <TableView layoutX="9.0" layoutY="357.0" prefHeight="200.0" prefWidth="733.0">
+         <columns>
+            <TableColumn prefWidth="213.0" text="Categoria" />
+            <TableColumn prefWidth="287.0" text="Nombre" />
+            <TableColumn prefWidth="232.0" text="Producto" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

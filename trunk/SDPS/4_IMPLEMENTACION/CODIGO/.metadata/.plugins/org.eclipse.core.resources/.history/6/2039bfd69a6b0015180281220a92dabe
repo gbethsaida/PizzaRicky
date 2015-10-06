@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane prefHeight="107.0" prefWidth="1001.0" style="-fx-background-color: #FF3030;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="8.0" layoutY="65.0" prefHeight="42.0" prefWidth="988.0">
+               <children>
+                  <Button fx:id="btnInicio" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Iniciar" />
+                  <Separator orientation="VERTICAL" prefHeight="42.0" prefWidth="5.0" />
+                  <Button fx:id="btnCategoria" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Categorias" />
+                  <Separator orientation="VERTICAL" prefHeight="42.0" prefWidth="5.0" />
+                  <Button fx:id="btnProducto" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Productos" />
+                  <Separator orientation="VERTICAL" prefHeight="42.0" prefWidth="5.0" />
+                  <Button fx:id="btnEmpleado" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Empleados" />
+                  <Separator orientation="VERTICAL" prefHeight="42.0" prefWidth="5.0" />
+                  <Button fx:id="btnMedida" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Medidas" />
+                  <Separator orientation="VERTICAL" prefHeight="42.0" prefWidth="5.0" />
+                  <Button fx:id="btnUnidad" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Unidades" />
+                  <Separator orientation="VERTICAL" prefHeight="42.0" prefWidth="5.0" />
+                  <Button fx:id="btnCliente" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Clientes" />
+                  <Separator orientation="VERTICAL" prefHeight="42.0" prefWidth="5.0" />
+                  <Button fx:id="btnCerrar" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Cerrar" />
+               </children>
+            </HBox>
+            <ImageView fitHeight="68.0" fitWidth="101.0" layoutX="899.0" layoutY="-2.0">
+               <image>
+                  <Image url="@iconos/logoRicky.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="4.0" layoutY="16.0" text="Empleado:">
+               <font>
+                  <Font name="Estrangelo Edessa" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblEmpleado" layoutX="125.0" layoutY="17.0" text="Label">
+               <font>
+                  <Font name="Estrangelo Edessa" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #FF3030;" BorderPane.alignment="CENTER" />
+   </right>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

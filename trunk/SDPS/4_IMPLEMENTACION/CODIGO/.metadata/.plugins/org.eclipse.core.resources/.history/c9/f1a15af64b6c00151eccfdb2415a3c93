@@ -1,0 +1,9 @@
+package Vista;
+
+public interface IControladorVentana {
+
+	
+
+	void asignarVentana(VentanaControlador paginaInterna);
+
+}

@@ -1,0 +1,32 @@
+package pizzeriaRicky.controlador;
+
+import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
+
+public class ControladorPrincipal implements Initializable{
+	@FXML private Button btnInicio;
+	@FXML private Button btnCategoria;
+	@FXML private Button btnProducto;
+	@FXML private Button btnEmpleado;
+	@FXML private Button btnMedida;
+	@FXML private Button btnUnidad;
+	@FXML private Button btnCliente;
+	@FXML private Button btnCerrar;
+	@FXML private Label lblEmpleado;
+	
+	
+	public void inicializar(URL arg0, ResourceBundle arg1){
+		lblEmpleado.setText("");
+	}
+	
+	public void asignarDatos(Empleado objeto){
+		lblEmpleado.setText(objeto.toStrign().trim());
+	}
+	
+	public void limpiarDatos(){
+		lblEmpleado.setText("");
+	}
+	
+	public void 
+
+}

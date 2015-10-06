@@ -1,0 +1,59 @@
+package pizzeriaRicky.controlador;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import pizzeriaRicky.modelo.Empleado;
+import pizzeriaRicky.vista.ControladorVentana;
+import pizzeriaRicky.vista.Principal;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+
+
+	
+	public class ControladorPrincipal implements Initializable{
+		@FXML private Label lblUsuario;
+		@FXML private Button btnInicio;
+		@FXML private Button btnCategoria;
+		@FXML private Button btnProducto;
+		@FXML private Button btnEmpleado;
+		@FXML private Button btnMedida;
+		@FXML private Button btnUnidad;
+		@FXML private Button btnCliente;
+		@FXML private Button btnCerrar;
+		
+		ControladorVentana miControlador;
+		
+		
+		public void initialize(URL arg0, ResourceBundle arg1) {
+			lblUsuario.setText("");
+		}
+
+		public void asignarDatos(Empleado objeto){
+			lblUsuario.setText(objeto.toString().trim());
+		}
+		
+		public void limpiarDatos(){
+			lblUsuario.setText("");
+		}
+		
+		/*public void IniciarSession(){
+			miControlador.mostrarPantalla(Principal.pantallaLogin);
+		}
+	*/
+		public void AbririProducto(){
+			miControlador.mostrarPantalla(Principal.pantallaProductos);
+
+		}
+		
+		public void AbrirCliente(){
+			miControlador.mostrarPantalla(Principal.pantallaClientes);
+		}
+		
+		public void AbrirEmpleado(){
+			miControlador.mostrarPantalla(Principal.pantallaEmpleados);
+		}
+	}
+

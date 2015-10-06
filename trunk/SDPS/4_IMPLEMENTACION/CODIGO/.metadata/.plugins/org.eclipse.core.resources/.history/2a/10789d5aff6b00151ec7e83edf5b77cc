@@ -1,0 +1,86 @@
+package pizzeriaRicky.vista;
+
+import java.net.URL;
+
+
+
+
+import pizzeriaRicky.controlador.ControladorPrincipal;
+import pizzeriaRicky.vista.Principal;
+
+//import pizzeriaRicky.controlador.LoginController;
+import pizzeriaRicky.modelo.Empleado;
+import pizzeriaRicky.vista.ControladorVentana;
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Tooltip;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
+
+public class Principal extends Application{
+	ControladorVentana misVentanas=new ControladorVentana();
+	ControladorPrincipal controladorPrincipal=null;
+	BorderPane contenedor = null;
+	
+	public static Empleado EmpleadoActual=null;
+	public static String pantallaInicio="Inicio";
+	public static String archivoInicio="inicio.fxml";
+	
+	public static String pantallaClientes="Cliente";
+	public static String archivoClientes="clientes.fxml";
+	
+	public static String pantallaEmpleados="Empleados";
+	public static String archivoEmpleados="empleados.fxml";
+	
+	public static String pantallaCategorias="Catgorias";
+	public static String archivoCategorias="categorias.fxml";
+	
+	public static String pantallaLogin="Login";
+	public static String archivoLogin="login.fxml";
+
+	Button btnClose =null;
+	Button btnProducts = null;
+	Button btnCustomers = null;
+	Button btnEmployees = null;
+	Button btnCategorias = null;
+	Button btnLogin = null;
+	
+	public static void main(String[] args) {
+		launch(args);
+	}
+
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		misVentanas.cargarPantalla(Principal.pantallaInicio,Principal.archivoInicio);
+		misVentanas.cargarPantalla(Principal.pantallaClientes,Principal.archivoClientes);
+		misVentanas.cargarPantalla(Principal.pantallaEmpleados,Principal.archivoEmpleados);
+		misVentanas.cargarPantalla(Principal.pantallaCategorias,Principal.archivoCategorias);
+
+
+		misVentanas.mostrarPantalla(Principal.pantallaInicio);
+		
+		StackPane root = new StackPane();
+		Scene scene = new Scene(root, 1000, 700);
+		URL location = getClass().getResource("Principal.fxml");
+		FXMLLoader fxml = new FXMLLoader(location);
+		contenedor = (BorderPane)fxml.load();
+		controladorPrincipal = fxml.getController();
+		contenedor.setCenter(misVentanas);
+		root.getChildren().add(contenedor);
+		primaryStage.centerOnScreen();
+		primaryStage.setScene(scene);
+		primaryStage.show();
+	}
+}
+	
