@@ -93,7 +93,7 @@ import pizzeriaRicky.vista.Principal;
 			
 			StackPane root = new StackPane();
 			Scene escena = new Scene(root, 1000, 745);
-			URL location = getClass().getResource("Principal.fxml");
+			URL location = getClass().getResource("principal.fxml");
 			FXMLLoader fxml = new FXMLLoader(location);
 			contenedor = (BorderPane)fxml.load();
 			controladorPrincipal = fxml.getController();
@@ -115,9 +115,7 @@ import pizzeriaRicky.vista.Principal;
 		HBox mnu = new HBox();
 		mnu.setPadding(new Insets(5));
 		mnu.setStyle("-fx-background-color:#FF3030");
-		
-		String ruta = System.getProperty("user.dir");
-		ruta+="/src/pizzeriaRicky/vista/icons";
+
 	
 		btnLogin = new Button("Ingresar");
 		btnLogin.setGraphicTextGap(1);
@@ -171,11 +169,11 @@ import pizzeriaRicky.vista.Principal;
 		btnCerrar.setGraphicTextGap(1);
 		btnCerrar.setPrefWidth(150);
 		btnCerrar.setPrefHeight(50);
-		btnCerrar.setVisible(false);
+		btnCerrar.setVisible(true);
 		btnCerrar.setTooltip(new Tooltip("Cerrar"));
 		btnCerrar.setOnAction(new btnCerrar_Click());
 		
-		
+
 		
 		mnu.setSpacing(10);
 		mnu.getChildren().add(btnLogin);
@@ -192,7 +190,6 @@ import pizzeriaRicky.vista.Principal;
 	public class btnEmpleados_Click implements EventHandler<ActionEvent>{
 		public void handle(ActionEvent arg0) {
 			misVentanas.mostrarPantalla(Principal.pantallaEmpleado);
-			contenedor.setCenter(misVentanas);
 		}
 	}
 	

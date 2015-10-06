@@ -1,7 +1,0 @@
-package pizzeriaRicky.vista;
-
-
-public class IControladorVentana {
-
-	public void asignarVentanaPrincipal(ControladorVentana paginaInterna);
-}
