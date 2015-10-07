@@ -5,11 +5,12 @@ import java.io.IOException;
 import java.net.URL;
 
 import pizzeriaRicky.controlador.ControladorLogin;
+import pizzeriaRicky.modelo.Empleado;
 import pizzeriaRicky.vista.Principal.btnProducto_Click;
 import pizzeriaRicky.vista.Principal.btnCerrar_Click;
 import pizzeriaRicky.vista.Principal.btnClientes_Click;
 import pizzeriaRicky.vista.Principal.btnEmpleados_Click;
-//import pizzeriaRicky.vista.Principal.btnLogin_Click;
+import pizzeriaRicky.vista.Principal.btnLogin_Click;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -38,10 +39,10 @@ import pizzeriaRicky.vista.Principal;
 		ControladorPrincipal controladorPrincipal = null;
 		BorderPane contenedor = null;
 		
-		//public static EmpleadoActual = null;
+		public static Empleado EmpleadoActual = null;
 		
-		public static String pantallaInicio = "Inicio";
-		public static String archivoInicio = "inicio.fxml";
+		//public static String pantallaInicio = "Inicio";
+		//public static String archivoInicio = "inicio.fxml";
 		
 		public static String pantallaCategoria = "Categoria";
 		public static String archivoCategoria = "categorias.fxml";
@@ -61,8 +62,8 @@ import pizzeriaRicky.vista.Principal;
 		public static String pantallaUnidad = "Unidad";
 		public static String archivoUnidad = "unidades.fxml";
 		
-		//public static String pantallaLogin="Login";
-		//public static String archivoLogin="login.fxml";
+		public static String pantallaLogin="Login";
+		public static String archivoLogin="login1.fxml";
 		
 		Button btnLogin = null;
 		Button btnCliente = null;
@@ -78,8 +79,8 @@ import pizzeriaRicky.vista.Principal;
 		
 		@Override
 		public void start(Stage primaryStage) throws Exception {
-			misVentanas.cargarPantalla(Principal.pantallaInicio,Principal.archivoInicio);
-
+			//misVentanas.cargarPantalla(Principal.pantallaInicio,Principal.archivoInicio);
+			misVentanas.cargarPantalla(Principal.pantallaLogin, Principal.archivoLogin);
 			misVentanas.cargarPantalla(Principal.pantallaCategoria,Principal.archivoCategoria);
 			misVentanas.cargarPantalla(Principal.pantallaCliente,Principal.archivoCliente);
 			misVentanas.cargarPantalla(Principal.pantallaEmpleado,Principal.archivoEmpleado);
@@ -87,7 +88,7 @@ import pizzeriaRicky.vista.Principal;
 			misVentanas.cargarPantalla(Principal.pantallaProducto,Principal.archivoProducto);
 			misVentanas.cargarPantalla(Principal.pantallaUnidad,Principal.archivoUnidad);
 			
-			misVentanas.mostrarPantalla(Principal.pantallaInicio);
+			//misVentanas.mostrarPantalla(Principal.pantallaInicio);
 			
 			
 			
@@ -116,14 +117,13 @@ import pizzeriaRicky.vista.Principal;
 		mnu.setPadding(new Insets(5));
 		mnu.setStyle("-fx-background-color:#FF3030");
 
-	
 		btnLogin = new Button("Ingresar");
 		btnLogin.setGraphicTextGap(1);
 		btnLogin.setPrefWidth(150);
 		btnLogin.setPrefHeight(50);
 		btnLogin.setDisable(false);
 		btnLogin.setTooltip(new Tooltip("Ingresar"));
-		//btnLogin.setOnAction(new btnLogin_Click());
+		btnLogin.setOnAction(new btnLogin_Click());
 		
 		btnProducto = new Button("Productos");
 		btnProducto.setPrefWidth(150);
@@ -172,9 +172,7 @@ import pizzeriaRicky.vista.Principal;
 		btnCerrar.setVisible(true);
 		btnCerrar.setTooltip(new Tooltip("Cerrar"));
 		btnCerrar.setOnAction(new btnCerrar_Click());
-		
 
-		
 		mnu.setSpacing(10);
 		mnu.getChildren().add(btnLogin);
 		mnu.getChildren().add(btnEmpleado);
@@ -215,17 +213,20 @@ import pizzeriaRicky.vista.Principal;
         	btnPedido.setDisable(true);
         	btnVentas.setDisable(true);
         	btnCerrar.setVisible(false);
+        	//Stage stage = (Stage) btnCerrar.getScene().getWindow();
+		   // stage.hide();
+        	misVentanas.setVisible(false);
 		}
 	}
 	
-	/*public class btnLogin_Click implements EventHandler<ActionEvent>{
+	public class btnLogin_Click implements EventHandler<ActionEvent>{
 		public void handle(ActionEvent arg0) {
 			Stage primary= new Stage(StageStyle.UNDECORATED);
 			try {
 				FXMLLoader miCargador= new FXMLLoader(getClass().getResource(Principal.archivoLogin));
 				AnchorPane frm= (AnchorPane)miCargador.load();
 				ControladorLogin controlador = miCargador.getController();
-				primary.setScene(new Scene(frm, 300, 220));
+				primary.setScene(new Scene(frm, 400, 500));
 		        primary.setResizable(false);
 		        primary.initModality(Modality.APPLICATION_MODAL);
 		        primary.showAndWait();
@@ -234,14 +235,13 @@ import pizzeriaRicky.vista.Principal;
 		        	btnLogin.setDisable(true);
 		        	btnCliente.setDisable(false);
 		        	btnEmpleado.setDisable(false);
-		        	btnCategoria.setDisable(false);
+		        	//btnCategoria.setDisable(false);
 		        	btnProducto.setDisable(false);
-
 		        	btnCerrar.setVisible(true);
 		        }		        
 			} catch (IOException e) {
 				System.out.println(e.getMessage());
 			}
 		}
-	}*/
+	}
 }

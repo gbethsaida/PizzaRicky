@@ -9,7 +9,7 @@ public interface IOpciones {
 			java.lang.IllegalAccessException,
 			java.sql.SQLException, Exception;
 	
-	Object Buscar(int clave) throws java.lang.ClassNotFoundException,
+	Object Buscar(String clave) throws java.lang.ClassNotFoundException,
 			java.lang.InstantiationException,
 			java.lang.IllegalAccessException,
 			java.sql.SQLException, Exception;

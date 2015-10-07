@@ -34,7 +34,7 @@ public class ParametrosConexion {
 	public void asignarParametros(){
 		try {
 			Properties propiedades = new Properties(); 
-			PATH=PATH+"/src/com/alda/facilito/model/conexion.properties";
+			PATH=PATH+"/src/pizzeriaRicky/modelo/propiedades.conexion";
 			FileInputStream entrada = new FileInputStream(PATH);
 			propiedades.load(entrada);
 			contrasenia = propiedades.getProperty("CONTRASENIA");

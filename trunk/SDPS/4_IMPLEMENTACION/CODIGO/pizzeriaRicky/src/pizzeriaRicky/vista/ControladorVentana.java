@@ -35,7 +35,7 @@ import pizzeriaRicky.vista.IControladorVentana;
 				AnchorPane ventanaCargada= (AnchorPane)miCargador.load();
 				@SuppressWarnings("unused")
 				IControladorVentana controladorVentana= ((IControladorVentana)miCargador.getController());
-			//	controladorVentana.asignarVentanaPrincipal(this);
+				//controladorVentana.asignarVentanaPrincipal(this);
 				agregarPantalla(opcion, ventanaCargada);
 				
 				return true;
@@ -55,6 +55,7 @@ import pizzeriaRicky.vista.IControladorVentana;
 				return true;
 				}
 		}
+		
 		public boolean mostrarPantalla(final String opcion){
 			if(Pantallas.get(opcion)!=null){
 				final DoubleProperty opacidad=opacityProperty();
