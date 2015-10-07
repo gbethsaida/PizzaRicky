@@ -48,7 +48,7 @@ import pizzeriaRicky.vista.IControladorVentana;
 		
 		public boolean descargarPantalla(String opcion){
 			if(Pantallas.remove(opcion)==null){
-				System.out.println();
+				System.out.println("No esta haciendo nada");
 				return false;
 				}
 			else{
@@ -62,7 +62,7 @@ import pizzeriaRicky.vista.IControladorVentana;
 			    if(!getChildren().isEmpty()){
 			    	Timeline tiempo= new Timeline(
 			    	   new KeyFrame(Duration.ZERO, new KeyValue(opacidad, 1.0)),
-			    	   new KeyFrame(new Duration(1000), new EventHandler<ActionEvent>(){
+			    	   new KeyFrame(new Duration(500), new EventHandler<ActionEvent>(){
 			    		   public void handle(ActionEvent event){
 			    			   getChildren().remove(0);
 			    			   getChildren().add(0, Pantallas.get(opcion));

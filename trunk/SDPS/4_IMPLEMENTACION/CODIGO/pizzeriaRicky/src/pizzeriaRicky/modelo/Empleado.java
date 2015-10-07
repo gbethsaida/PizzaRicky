@@ -12,7 +12,7 @@ import javafx.beans.property.SimpleStringProperty;
 		private final SimpleStringProperty nombre;
 		private final SimpleStringProperty apellidoPaterno;
 	    private final SimpleStringProperty apellidoMaterno;
-	    private final SimpleIntegerProperty telefono;
+	  // private final SimpleIntegerProperty telefono;
 	    private final SimpleStringProperty avenida;
 	    private final SimpleStringProperty calle;
 	    private final SimpleIntegerProperty celular;
@@ -24,7 +24,7 @@ import javafx.beans.property.SimpleStringProperty;
 	    	this.nombre= new SimpleStringProperty();
 	    	this.apellidoPaterno= new SimpleStringProperty();
 	    	this.apellidoMaterno= new SimpleStringProperty();
-	    	this.telefono= new SimpleIntegerProperty();
+	    	//this.telefono= new SimpleIntegerProperty();
 	    	this.avenida= new SimpleStringProperty();
 	    	this.calle= new SimpleStringProperty();
 	    	this.celular= new SimpleIntegerProperty();
@@ -34,11 +34,11 @@ import javafx.beans.property.SimpleStringProperty;
 	    	
 	    }
 	    
-	    public Empleado (String nombre, String apellidoPaterno, String apellidoMaterno, int telefono){
+	    public Empleado (String nombre, String apellidoPaterno, String apellidoMaterno){
 	    	this.nombre= new SimpleStringProperty(nombre);
 	    	this.apellidoPaterno= new SimpleStringProperty(apellidoPaterno);
 	    	this.apellidoMaterno= new SimpleStringProperty(apellidoMaterno);
-	    	this.telefono= new SimpleIntegerProperty(telefono);
+	    	//this.telefono= new SimpleIntegerProperty(telefono);
 	    	this.avenida= new SimpleStringProperty();
 	    	this.calle= new SimpleStringProperty();
 	    	this.celular= new SimpleIntegerProperty();
@@ -47,11 +47,11 @@ import javafx.beans.property.SimpleStringProperty;
 	    	this.usuario= new SimpleStringProperty();	
 	    }
 	    
-	    public Empleado (String nombre, String apellidoPaterno, String apellidoMaterno, int telefono, String avenida, String calle, int celular){
+	    public Empleado (String nombre, String apellidoPaterno, String apellidoMaterno, String avenida, String calle, int celular){
 	    	this.nombre= new SimpleStringProperty(nombre);
 	    	this.apellidoPaterno= new SimpleStringProperty(apellidoPaterno);
 	    	this.apellidoMaterno= new SimpleStringProperty(apellidoMaterno);
-	    	this.telefono= new SimpleIntegerProperty(telefono);
+	    	//this.telefono= new SimpleIntegerProperty(telefono);
 	    	this.avenida= new SimpleStringProperty(avenida);
 	    	this.calle= new SimpleStringProperty(calle);
 	    	this.celular= new SimpleIntegerProperty(celular);
@@ -86,13 +86,13 @@ import javafx.beans.property.SimpleStringProperty;
 			return this.apellidoMaterno.get();
 		}
 		
-		public void setTelefono(int telefono){
+		/*public void setTelefono(int telefono){
 			this.telefono.set(telefono);
 		}
 		
 		public int getTelefono(){
 			return this.telefono.get();
-		}
+		}*/
 		
 		public void setAvenida(String avenida){
 			this.avenida.set(avenida);
@@ -169,8 +169,8 @@ import javafx.beans.property.SimpleStringProperty;
 				obj = new Empleado(
 						cdb.resultado.getString("nombre"),
 						cdb.resultado.getString("apellido_paterno"),
-						cdb.resultado.getString("apellido_materno"),
-						cdb.resultado.getInt("telefono"));
+						cdb.resultado.getString("apellido_materno"));
+						//cdb.resultado.getInt("telefono"));
 				}
 			cdb.desconectar();	
 			return obj;
@@ -184,7 +184,7 @@ import javafx.beans.property.SimpleStringProperty;
 			cdb.un_sql="update empleados set nombre='"+this.getNombre()+"',"
 					+ "apellido_paterno='"+this.getApellidoPaterno()+"',"
 					+ "apellido_materno='"+this.getApellidoMaterno()+"',"
-					+ "curp='"+this.getTelefono()+"',"
+					
 					+ "usuario='"+this.getAvenida()+"',"
 					+ "contrasenia='"+this.getCalle()+"',"
 					+ "tipo='"+this.getCelular()+"' where id_empleado="+ this.cargo.get();
@@ -207,7 +207,7 @@ import javafx.beans.property.SimpleStringProperty;
 			query+="'"+this.nombre.get().trim()+"',";
 			query+="'"+this.apellidoPaterno.get().trim()+"',";
 			query+="'"+this.apellidoMaterno.get().trim()+"',";
-			query+="'"+this.telefono.get()+"',";
+			
 			query+="'"+this.avenida.get().trim()+"',";
 			query+="'"+this.calle.get().trim()+"',";
 			query+="'"+this.cargo.get().trim()+"',";
