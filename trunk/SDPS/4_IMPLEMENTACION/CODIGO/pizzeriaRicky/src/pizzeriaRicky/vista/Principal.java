@@ -72,6 +72,7 @@ import pizzeriaRicky.vista.Principal;
 		Button btnPedido = null;
 		Button btnVentas = null;
 		Button btnCerrar = null;
+		Button btnMenu = null;
 		
 		public static void main(String[] args) {
 			launch(args);
@@ -112,7 +113,9 @@ import pizzeriaRicky.vista.Principal;
 			contenedor.setTop(menu());
 		}
 	
-	private HBox menu(){
+		
+	
+		private HBox menu(){
 		HBox mnu = new HBox();
 		mnu.setPadding(new Insets(5));
 		mnu.setStyle("-fx-background-color:#FF3030");
@@ -169,10 +172,20 @@ import pizzeriaRicky.vista.Principal;
 		btnCerrar.setGraphicTextGap(1);
 		btnCerrar.setPrefWidth(150);
 		btnCerrar.setPrefHeight(50);
-		btnCerrar.setVisible(true);
+		btnCerrar.setVisible(false);
 		btnCerrar.setTooltip(new Tooltip("Cerrar"));
 		btnCerrar.setOnAction(new btnCerrar_Click());
-
+		
+		btnMenu = new Button("Menu");
+		btnMenu.setOnAction(new btnMenu_Click());
+		
+		/*btnMenu.setOnAction(new EventHandler<ActionEvent>(){
+			@Override
+			public void handle(ActionEvent arg0) {
+				btnCerrar.setDisable(true);
+			}
+		});*/
+		
 		mnu.setSpacing(10);
 		mnu.getChildren().add(btnLogin);
 		mnu.getChildren().add(btnEmpleado);
@@ -181,8 +194,15 @@ import pizzeriaRicky.vista.Principal;
 		mnu.getChildren().add(btnVentas);
 		mnu.getChildren().add(btnProducto);
 		mnu.getChildren().add(btnCerrar);
+		mnu.getChildren().add(btnMenu);
 		
 		return mnu;
+	}
+	
+	public class btnMenu_Click implements EventHandler<ActionEvent>{
+		public void handle(ActionEvent arg0){
+			btnCerrar.setVisible(true);
+		}
 	}
 	
 	public class btnEmpleados_Click implements EventHandler<ActionEvent>{

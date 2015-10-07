@@ -8,43 +8,78 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ToolBar layoutY="48.0" prefWidth="750.0">
+      <ToolBar layoutY="35.0" prefWidth="750.0">
          <items>
-            <Button fx:id="btnNuevo" mnemonicParsing="false">
+            <Button fx:id="btnNuevo" mnemonicParsing="false" prefHeight="39.0" prefWidth="62.0">
                <tooltip>
                   <Tooltip text="Nuevo" />
                </tooltip>
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0">
+                     <image>
+                        <Image url="@iconos/new.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
             <Button fx:id="btnGuardar" mnemonicParsing="false">
                <tooltip>
                   <Tooltip text="Guardar" />
                </tooltip>
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0">
+                     <image>
+                        <Image url="@iconos/Save.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
             <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="15.0" />
             <Button fx:id="btnEditar" mnemonicParsing="false">
                <tooltip>
                   <Tooltip text="Editar" />
                </tooltip>
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0">
+                     <image>
+                        <Image url="@iconos/edit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
             <Button fx:id="btnEliminar" mnemonicParsing="false">
                <tooltip>
                   <Tooltip text="Borrar" />
                </tooltip>
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0">
+                     <image>
+                        <Image url="@iconos/deletee.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
             <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="15.0" />
             <Button fx:id="btnCancelar" mnemonicParsing="false">
                <tooltip>
                   <Tooltip text="Cancelar" />
                </tooltip>
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0">
+                     <image>
+                        <Image url="@iconos/atraas.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
          </items>
       </ToolBar>
-      <Label prefHeight="48.0" prefWidth="750.0" style="-fx-background-color: #FF3030;" text="Clientes">
+      <Label prefHeight="35.0" prefWidth="750.0" style="-fx-background-color: #FF3030;" text="Clientes">
          <font>
             <Font name="Estrangelo Edessa" size="24.0" />
          </font>
       </Label>
-      <TitledPane animated="false" collapsible="false" layoutX="9.0" layoutY="112.0" prefHeight="170.0" prefWidth="733.0" text="Datos Generales">
+      <TitledPane animated="false" collapsible="false" layoutX="9.0" layoutY="102.0" prefHeight="170.0" prefWidth="733.0" text="Datos Generales">
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
@@ -70,12 +105,23 @@
             </AnchorPane>
          </content>
       </TitledPane>
-      <Label layoutX="10.0" layoutY="525.0" text="Total:0 Registro" />
-      <Button fx:id="btnQFiltro" layoutX="385.0" layoutY="290.0" mnemonicParsing="false" text="Quitar Filtro:" />
-      <Button fx:id="btnFiltro" layoutX="475.0" layoutY="290.0" mnemonicParsing="false" text="Filtrar" />
-      <Button fx:id="btnBuscar" layoutX="537.0" layoutY="290.0" mnemonicParsing="false" text="Buscar" />
-      <TextField fx:id="txtBuscar" layoutX="594.0" layoutY="290.0" />
-      <TableView fx:id="tblClientes" layoutX="9.0" layoutY="325.0" prefHeight="200.0" prefWidth="733.0">
+      <Label layoutX="10.0" layoutY="525.0" text="Total: 0 Registro(s)" />
+      <TitledPane animated="false" collapsible="false" layoutX="9.0" layoutY="280.0" prefHeight="241.0" prefWidth="733.0" text="Clientes registrados">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+         </content>
+      </TitledPane>
+      <Label layoutX="19.0" layoutY="320.0" text="Buscar:" />
+      <Button fx:id="btnFiltro" layoutX="233.0" layoutY="318.0" mnemonicParsing="false" text="Filtrar">
+         <tooltip>
+            <Tooltip text="Filtrar" />
+         </tooltip></Button>
+      <Button fx:id="btnQFiltro" layoutX="295.0" layoutY="318.0" mnemonicParsing="false" text="Quitar Filtro">
+         <tooltip>
+            <Tooltip text="Quitar filtro" />
+         </tooltip></Button>
+      <TextField fx:id="txtBuscar" layoutX="65.0" layoutY="317.0" />
+      <TableView fx:id="tblClientes1" layoutX="9.0" layoutY="351.0" prefHeight="170.0" prefWidth="733.0">
          <columns>
             <TableColumn prefWidth="75.0" text="Nombre" />
             <TableColumn prefWidth="121.0" text="Apellido Paterno" />
