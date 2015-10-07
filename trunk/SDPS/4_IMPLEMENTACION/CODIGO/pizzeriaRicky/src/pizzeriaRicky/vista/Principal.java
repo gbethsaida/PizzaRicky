@@ -63,7 +63,7 @@ import pizzeriaRicky.vista.Principal;
 		public static String archivoUnidad = "unidades.fxml";
 		
 		public static String pantallaLogin="Login";
-		public static String archivoLogin="login1.fxml";
+		public static String archivoLogin="login.fxml";
 		
 		Button btnLogin = null;
 		Button btnCliente = null;
