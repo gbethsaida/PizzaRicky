@@ -19,7 +19,6 @@ import javafx.beans.property.SimpleStringProperty;
 	    private final SimpleStringProperty cargo;
 	    private final SimpleStringProperty clave;
 	    private final SimpleStringProperty usuario;
-	    private String properties;
 	    
 	    public Empleado(){
 	    	this.nombre= new SimpleStringProperty();
@@ -127,8 +126,8 @@ import javafx.beans.property.SimpleStringProperty;
 			return this.cargo.get();
 		}
 		
-		public void setClave(String clave){
-			this.clave.set(clave);
+		public void setClave(String contrasenia){
+			this.clave.set(contrasenia);
 		}
 		
 		public String getClave(){
@@ -143,11 +142,15 @@ import javafx.beans.property.SimpleStringProperty;
 			return this.usuario.get();
 		}
 		
+		public String toString(){
+			return this.nombre.get()+" "+this.apellidoPaterno.get()+" "+this.apellidoMaterno.get();
+		}
+		
 		public boolean Eliminar() throws ClassNotFoundException,
 				InstantiationException, IllegalAccessException, SQLException,
 				Exception {
 			Conexion cdb=new Conexion();
-			cdb.un_sql="update empleado set activo='n' where idempleado="+ this.cargo.get();
+			cdb.un_sql="update empleados set activo='n' where id_empleado="+ this.cargo.get();
 			cdb.un_st.execute(cdb.un_sql);
 			
 			cdb.desconectar();
@@ -157,16 +160,16 @@ import javafx.beans.property.SimpleStringProperty;
 		public Empleado Validar()throws SQLException, Exception, ClassNotFoundException{
 			Empleado obj = null;
 			Conexion cdb = new Conexion(); 
-			cdb.un_sql="select cargo, nombre, apellidopaterno,"
-					+ " apellidomaterno from empleado "
-					+ " where usuario='"+this.getCalle()+"'"
-					+ " and clave='"+this.getCelular()+"'";
+			cdb.un_sql="select cargo, nombre, apellido_paterno,"
+					+ " apellido_materno from empleados "
+					+ " where usuario='"+this.getUsuario()+"'"
+					+ " and contrasenia='"+this.getClave()+"'";
 			cdb.resultado=cdb.un_st.executeQuery(cdb.un_sql);
 			while(cdb.resultado.next()){
 				obj = new Empleado(
 						cdb.resultado.getString("nombre"),
-						cdb.resultado.getString("apellidoPaterno"),
-						cdb.resultado.getString("apellidoMaterno"),
+						cdb.resultado.getString("apellido_paterno"),
+						cdb.resultado.getString("apellido_materno"),
 						cdb.resultado.getInt("telefono"));
 				}
 			cdb.desconectar();	
@@ -178,13 +181,13 @@ import javafx.beans.property.SimpleStringProperty;
 				Exception {
 			
 			Conexion cdb=new Conexion();
-			cdb.un_sql="update empleado set nombre='"+this.getNombre()+"',"
-					+ "apellidopaterno='"+this.getApellidoPaterno()+"',"
-					+ "apellidomaterno='"+this.getApellidoMaterno()+"',"
+			cdb.un_sql="update empleados set nombre='"+this.getNombre()+"',"
+					+ "apellido_paterno='"+this.getApellidoPaterno()+"',"
+					+ "apellido_materno='"+this.getApellidoMaterno()+"',"
 					+ "curp='"+this.getTelefono()+"',"
 					+ "usuario='"+this.getAvenida()+"',"
-					+ "clave='"+this.getCalle()+"',"
-					+ "tipo='"+this.getCelular()+"' where idempleado="+ this.cargo.get();
+					+ "contrasenia='"+this.getCalle()+"',"
+					+ "tipo='"+this.getCelular()+"' where id_empleado="+ this.cargo.get();
 			cdb.un_st.execute(cdb.un_sql);
 			
 			cdb.desconectar();
@@ -198,8 +201,8 @@ import javafx.beans.property.SimpleStringProperty;
 				Exception {
 	Random rnd = new Random();
 			
-			String query ="insert into empleado (idempleado, nombre, apellidoPaterno,";
-			query+="apellidoMaterno,telefono,avenida,calle,celular,cargo) values(";
+			String query ="insert into empleados (id_empleado, nombre, apellido_paterno,";
+			query+="apellido_materno,telefono,avenida,calle,celular,cargo) values(";
 			query+="'"+rnd.nextInt(100)+"',";
 			query+="'"+this.nombre.get().trim()+"',";
 			query+="'"+this.apellidoPaterno.get().trim()+"',";

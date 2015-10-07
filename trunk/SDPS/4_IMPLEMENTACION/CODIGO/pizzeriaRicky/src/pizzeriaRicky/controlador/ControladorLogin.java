@@ -48,6 +48,8 @@ public class ControladorLogin implements Initializable{
 			}		
 		}catch(Exception e){
 			lblMensaje.setText(e.getMessage());
+			//Stage stage = (Stage) btnEntrar.getScene().getWindow();
+		   // stage.hide();
 		}
 	}
 	
