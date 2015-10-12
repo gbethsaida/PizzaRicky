@@ -131,34 +131,34 @@ import pizzeriaRicky.vista.Principal;
 		btnProducto = new Button("Productos");
 		btnProducto.setPrefWidth(150);
 		btnProducto.setPrefHeight(50);
-		btnProducto.setDisable(false);
+		btnProducto.setDisable(true);
 		btnProducto.setTooltip(new Tooltip("Productos"));
 		btnProducto.setOnAction(new btnProducto_Click());
 		
 		btnEmpleado = new Button("Empleados");
 		btnEmpleado.setPrefWidth(150);
 		btnEmpleado.setPrefHeight(50);
-		btnEmpleado.setDisable(false);
+		btnEmpleado.setDisable(true);
 		btnEmpleado.setTooltip(new Tooltip("Empleados"));
 		btnEmpleado.setOnAction(new btnEmpleados_Click());
 		
 		btnCliente = new Button("Clientes");
 		btnCliente.setPrefWidth(150);
 		btnCliente.setPrefHeight(50);
-		btnCliente.setDisable(false);
+		btnCliente.setDisable(true);
 		btnCliente.setTooltip(new Tooltip("Clientes"));
 		btnCliente.setOnAction(new btnClientes_Click());
 		
 		btnPedido = new Button("Pedidos");
 		btnPedido.setPrefWidth(150);
 		btnPedido.setPrefHeight(50);
-		btnPedido.setDisable(false);
+		btnPedido.setDisable(true);
 		btnPedido.setTooltip(new Tooltip("Categorias"));
 
 		btnVentas = new Button("Ventas");
 		btnVentas.setPrefWidth(150);
 		btnVentas.setPrefHeight(50);
-		btnVentas.setDisable(false);
+		btnVentas.setDisable(true);
 		btnVentas.setTooltip(new Tooltip("Categorias"));
 
 		/*btnCategoria = new Button("Categorias");
@@ -176,8 +176,8 @@ import pizzeriaRicky.vista.Principal;
 		btnCerrar.setTooltip(new Tooltip("Cerrar"));
 		btnCerrar.setOnAction(new btnCerrar_Click());
 		
-		btnMenu = new Button("Menu");
-		btnMenu.setOnAction(new btnMenu_Click());
+		//btnMenu = new Button("Menu");
+		//btnMenu.setOnAction(new btnMenu_Click());
 		
 		/*btnMenu.setOnAction(new EventHandler<ActionEvent>(){
 			@Override
@@ -194,7 +194,7 @@ import pizzeriaRicky.vista.Principal;
 		mnu.getChildren().add(btnVentas);
 		mnu.getChildren().add(btnProducto);
 		mnu.getChildren().add(btnCerrar);
-		mnu.getChildren().add(btnMenu);
+	//	mnu.getChildren().add(btnMenu);
 		
 		return mnu;
 	}
@@ -236,7 +236,6 @@ import pizzeriaRicky.vista.Principal;
         	//Stage stage = (Stage) btnCerrar.getScene().getWindow();
 		   // stage.hide();
         	misVentanas.setVisible(false);
-        	misVentanas = null;
 		}
 	}
 	
@@ -256,6 +255,8 @@ import pizzeriaRicky.vista.Principal;
 		        	btnLogin.setDisable(true);
 		        	btnCliente.setDisable(false);
 		        	btnEmpleado.setDisable(false);
+		        	btnVentas.setDisable(false);
+		        	btnPedido.setDisable(false);
 		        	//btnCategoria.setDisable(false);
 		        	btnProducto.setDisable(false);
 		        	btnCerrar.setVisible(true);

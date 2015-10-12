@@ -6,16 +6,16 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" style="-fx-background-color: #E0E0E0;" stylesheets="@css/ventanas.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label prefHeight="35.0" prefWidth="750.0" style="-fx-background-color: #FF3030;" text="Medidas">
+      <Label prefHeight="35.0" prefWidth="750.0" style="-fx-background-color: #FF4040;" text="Medidas">
          <font>
             <Font name="Estrangelo Edessa" size="24.0" />
          </font>
       </Label>
-      <ToolBar layoutY="36.0" prefWidth="750.0">
+      <ToolBar layoutY="36.0" prefHeight="58.0" prefWidth="750.0" styleClass="toolbar">
          <items>
-            <Button fx:id="btnNuevo" mnemonicParsing="false">
+            <Button fx:id="btnNuevo" mnemonicParsing="false" styleClass="btn">
                <tooltip>
                   <Tooltip text="Nuevo" />
                </tooltip>
@@ -27,7 +27,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btnGuardar" mnemonicParsing="false">
+            <Button fx:id="btnGuardar" mnemonicParsing="false" styleClass="btn">
                <tooltip>
                   <Tooltip text="Guardar" />
                </tooltip>
@@ -40,7 +40,7 @@
                </graphic>
             </Button>
             <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="15.0" />
-            <Button fx:id="btnEditar" mnemonicParsing="false">
+            <Button fx:id="btnEditar" mnemonicParsing="false" styleClass="btn">
                <tooltip>
                   <Tooltip text="Editar" />
                </tooltip>
@@ -52,7 +52,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btnEliminar" mnemonicParsing="false">
+            <Button fx:id="btnEliminar" mnemonicParsing="false" styleClass="btn">
                <tooltip>
                   <Tooltip text="Eliminar" />
                </tooltip>
@@ -65,7 +65,7 @@
                </graphic>
             </Button>
             <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="15.0" />
-            <Button fx:id="btnCancelar" mnemonicParsing="false">
+            <Button fx:id="btnCancelar" mnemonicParsing="false" styleClass="btn">
                <tooltip>
                   <Tooltip text="Cancelar" />
                </tooltip>
@@ -79,24 +79,24 @@
             </Button>
          </items>
       </ToolBar>
-      <TitledPane animated="false" collapsible="false" layoutX="9.0" layoutY="108.0" prefHeight="200.0" prefWidth="733.0" text="Datos Generales">
+      <TitledPane animated="false" collapsible="false" layoutX="9.0" layoutY="108.0" prefHeight="200.0" prefWidth="733.0" styleClass="titledpane" text="Datos Generales">
          <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="anchorpane">
                <children>
                   <Label layoutX="13.0" layoutY="70.0" text="Nombre:" />
-                  <TextField fx:id="txtNombre" layoutX="98.0" layoutY="66.0" />
+                  <TextField fx:id="txtNombre" layoutX="98.0" layoutY="66.0" styleClass="textfield" />
                   <Label layoutX="317.0" layoutY="18.0" text="Producto:" />
                   <Label layoutX="8.0" layoutY="18.0" text="Categoria:" />
                   <ComboBox fx:id="cboCategoria" layoutX="97.0" layoutY="14.0" prefWidth="150.0" />
-                  <TextField fx:id="txtProducto" layoutX="401.0" layoutY="14.0" />
+                  <TextField fx:id="txtProducto" layoutX="401.0" layoutY="14.0" styleClass="textfield" />
                </children>
             </AnchorPane>
          </content>
       </TitledPane>
       <Label layoutX="9.0" layoutY="571.0" text="Total: 0 Registros(s)" />
-      <TitledPane animated="false" collapsible="false" layoutX="9.0" layoutY="317.0" prefHeight="251.0" prefWidth="733.0" text="Medidas registrados">
+      <TitledPane animated="false" collapsible="false" layoutX="9.0" layoutY="317.0" prefHeight="251.0" prefWidth="733.0" styleClass="titledpane" text="Medidas registrados">
          <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="anchorpane" />
          </content>
       </TitledPane>
       <TableView fx:id="tblMedidas" layoutX="9.0" layoutY="391.0" prefHeight="177.0" prefWidth="733.0">
@@ -115,6 +115,6 @@
          <tooltip>
             <Tooltip text="Quitar filtro" />
          </tooltip></Button>
-      <TextField fx:id="txtBuscar" layoutX="66.0" layoutY="354.0" />
+      <TextField fx:id="txtBuscar" layoutX="66.0" layoutY="354.0" styleClass="textfield" />
    </children>
 </AnchorPane>

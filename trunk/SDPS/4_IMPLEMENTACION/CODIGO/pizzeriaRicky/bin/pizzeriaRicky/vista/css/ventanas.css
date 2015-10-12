@@ -1,0 +1,38 @@
+.textfield{
+  -fx-text-box-border: black ;
+  -fx-focus-color: #ff3030 ;
+  -fx-background-radius:20;
+}
+.titledpane{
+	-fx-border-color:#ff3030;
+}
+.anchorpane{
+	-fx-border-color:#C1CDCD;
+	-fx-border-style:DASHED;
+	-fx-border-radius:20;
+}
+.btn{
+    -fx-background-radius: 5;
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #000000 0%, #A1A1A1 100%),
+        #030303,
+        #ADADAD,
+        radial-gradient(center 50% 50%, radius 100%, #DEDEDE, #BABABA);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+    -fx-pref-width:20;
+    -fx-pref-height:20;
+}
+.btn:hover {
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #000000 0%, #A1A1A1 100%),
+        #030303,
+        #ADADAD,
+        radial-gradient(center 50% 50%, radius 100%, #EBEBEB, #BABABA);
+}
+.btn:pressed {
+    -fx-padding: 8 8 8 8;
+    -fx-background-insets: 1 0 0 0,1 0 1 0, 1 0 2 0, 1 0 3 0;
+}
+.toolbar{
+	-fx-background-color:#E0E0E0;
+}

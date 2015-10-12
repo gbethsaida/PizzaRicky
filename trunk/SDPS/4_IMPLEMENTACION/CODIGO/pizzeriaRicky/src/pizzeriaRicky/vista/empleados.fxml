@@ -7,16 +7,16 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" style="-fx-background-color: #E0E0E0;" stylesheets="@css/ventanas.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TitledPane animated="false" collapsible="false" layoutX="8.0" layoutY="321.0" prefHeight="253.0" prefWidth="733.0" text="Empleados registrados">
+      <TitledPane animated="false" collapsible="false" layoutX="8.0" layoutY="321.0" prefHeight="253.0" prefWidth="733.0" styleClass="titledpane" text="Empleados registrados">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="anchorpane" />
         </content>
       </TitledPane>
-      <ToolBar layoutY="35.0" prefHeight="58.0" prefWidth="750.0">
+      <ToolBar layoutY="35.0" prefHeight="58.0" prefWidth="750.0" styleClass="toolbar">
          <items>
-            <Button fx:id="btnNuevo" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0">
+            <Button fx:id="btnNuevo" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0" styleClass="btn">
                <tooltip>
                   <Tooltip text="Nuevo" />
                </tooltip>
@@ -28,7 +28,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btnGuardar" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0">
+            <Button fx:id="btnGuardar" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="btn">
                <tooltip>
                   <Tooltip text="Guardar" />
                </tooltip>
@@ -41,7 +41,7 @@
                </graphic>
             </Button>
             <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="15.0" />
-            <Button fx:id="btnEditar" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0">
+            <Button fx:id="btnEditar" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="btn">
                <tooltip>
                   <Tooltip text="Editar" />
                </tooltip>
@@ -53,7 +53,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btnEliminar" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0">
+            <Button fx:id="btnEliminar" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="btn">
                <tooltip>
                   <Tooltip text="Borrar" />
                </tooltip>
@@ -66,7 +66,7 @@
                </graphic>
             </Button>
             <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="15.0" />
-            <Button fx:id="btnCancelar" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0">
+            <Button fx:id="btnCancelar" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="btn">
                <tooltip>
                   <Tooltip text="Cancelar" />
                </tooltip>
@@ -80,14 +80,14 @@
             </Button>
          </items>
       </ToolBar>
-      <Label prefHeight="35.0" prefWidth="750.0" style="-fx-background-color: #FF3030;" text="Empleados">
+      <Label prefHeight="35.0" prefWidth="750.0" style="-fx-background-color: #FF4040;" text="Empleados">
          <font>
             <Font name="Estrangelo Edessa" size="24.0" />
          </font>
       </Label>
-      <TitledPane animated="false" collapsible="false" layoutX="9.0" layoutY="99.0" prefHeight="130.0" prefWidth="733.0" text="Datos Generales">
+      <TitledPane animated="false" collapsible="false" layoutX="9.0" layoutY="99.0" prefHeight="130.0" prefWidth="733.0" styleClass="titledpane" text="Datos Generales">
          <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="138.0" prefWidth="731.0">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="138.0" prefWidth="731.0" styleClass="anchorpane">
                <children>
                   <Label layoutX="6.0" layoutY="13.0" text="Nombre:" />
                   <Label layoutX="6.0" layoutY="44.0" text="Apelllido paterno:" />
@@ -95,29 +95,29 @@
                   <Label layoutX="283.0" layoutY="44.0" text="Celular:" />
                   <Label layoutX="282.0" layoutY="13.0" text="Teléfono" />
                   <Label layoutX="517.0" layoutY="13.0" text="Calle:" />
-                  <TextField fx:id="txtNombre" layoutX="121.0" layoutY="9.0" />
+                  <TextField fx:id="txtNombre" layoutX="121.0" layoutY="9.0" styleClass="textfield" />
                   <ComboBox fx:id="cboTipo" layoutX="350.0" layoutY="74.0" prefHeight="25.0" prefWidth="149.0" promptText="Administrador" />
                   <Label layoutX="284.0" layoutY="78.0" text="Tipo:" />
-                  <TextField fx:id="txtCelular" layoutX="350.0" layoutY="40.0" />
-                  <TextField fx:id="txtTelefono" layoutX="350.0" layoutY="9.0" />
-                  <TextField fx:id="txtAP" layoutX="121.0" layoutY="40.0" />
-                  <TextField fx:id="txtAM" layoutX="121.0" layoutY="74.0" />
-                  <TextField fx:id="txtCalle" layoutX="574.0" layoutY="9.0" />
+                  <TextField fx:id="txtCelular" layoutX="350.0" layoutY="40.0" styleClass="textfield" />
+                  <TextField fx:id="txtTelefono" layoutX="350.0" layoutY="9.0" styleClass="textfield" />
+                  <TextField fx:id="txtAP" layoutX="121.0" layoutY="40.0" styleClass="textfield" />
+                  <TextField fx:id="txtAM" layoutX="121.0" layoutY="74.0" styleClass="textfield" />
+                  <TextField fx:id="txtCalle" layoutX="574.0" layoutY="9.0" styleClass="textfield" />
                   <Label layoutX="517.0" layoutY="44.0" text="Colonia:" />
                   <Label layoutX="517.0" layoutY="78.0" text="Ciudad:" />
-                  <TextField fx:id="txtColonia" layoutX="574.0" layoutY="40.0" />
-                  <TextField fx:id="txtCiudad" layoutX="574.0" layoutY="74.0" />
+                  <TextField fx:id="txtColonia" layoutX="574.0" layoutY="40.0" styleClass="textfield" />
+                  <TextField fx:id="txtCiudad" layoutX="574.0" layoutY="74.0" styleClass="textfield" />
                </children>
             </AnchorPane>
          </content>
       </TitledPane>
       <Label layoutX="9.0" layoutY="577.0" text="Total: 0 Registro(s)" />
-      <TextField fx:id="txtBuscar" layoutX="66.0" layoutY="355.0" />
+      <TextField fx:id="txtBuscar" layoutX="66.0" layoutY="355.0" styleClass="textfield" />
       <Button fx:id="btnQFiltro" layoutX="296.0" layoutY="356.0" mnemonicParsing="false" text="Quitar Filtro">
          <tooltip>
             <Tooltip text="Quitar filtro" />
          </tooltip></Button>
-      <Button fx:id="btnFiltro" layoutX="234.0" layoutY="355.0" mnemonicParsing="false" text="Filtrar">
+      <Button fx:id="btnFiltro" layoutX="234.0" layoutY="355.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="56.0" text="Filtrar">
          <tooltip>
             <Tooltip text="Filtrar" />
          </tooltip></Button>
@@ -132,16 +132,16 @@
          </columns>
       </TableView>
       <Label layoutX="20.0" layoutY="358.0" text="Buscar:" />
-      <TitledPane animated="false" collapsible="false" layoutX="8.0" layoutY="237.0" prefHeight="74.0" prefWidth="733.0" text="Inicio de sesión">
+      <TitledPane animated="false" collapsible="false" layoutX="8.0" layoutY="237.0" prefHeight="74.0" prefWidth="733.0" styleClass="titledpane" text="Inicio de sesión">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="anchorpane">
                <children>
                   <Label layoutX="12.0" layoutY="17.0" text="Usuario:" />
-                  <TextField fx:id="txtUsuario" layoutX="66.0" layoutY="13.0" />
+                  <TextField fx:id="txtUsuario" layoutX="66.0" layoutY="13.0" styleClass="textfield" />
                   <Label layoutX="238.0" layoutY="17.0" text="Contraseña:" />
                   <Label layoutX="493.0" layoutY="17.0" text="Confirmar:" />
-                  <TextField fx:id="txtContrasena" layoutX="314.0" layoutY="13.0" />
-                  <TextField fx:id="txtConfirmar" layoutX="578.0" layoutY="13.0" />
+                  <TextField fx:id="txtContrasena" layoutX="314.0" layoutY="13.0" styleClass="textfield" />
+                  <TextField fx:id="txtConfirmar" layoutX="578.0" layoutY="13.0" styleClass="textfield" />
                </children>
             </AnchorPane>
         </content>
